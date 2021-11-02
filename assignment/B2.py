@@ -1,62 +1,38 @@
-'''
-Viết chương trình với các yêu cầu sau.
--	Cho phép người sử dụng nhập vào ngày tháng năm sinh theo định dạng : ‘d:m:yyyy’
--	Tách và in riêng giá trị: ngày, tháng, năm
+# '''
+# Viết chương trình với các yêu cầu sau.
+# -	Cho phép người sử dụng nhập vào ngày tháng năm sinh theo định dạng : ‘d:m:yyyy’
+# -	Tách và in riêng giá trị: ngày, tháng, năm
 
-'''
-class c_Date:
-    #Phương thức khai báo hàm khởi tạo
-    def __init__(self,ngay,thang,nam):
-        self.ngay=ngay
-        self.thang=thang
-        self.nam=nam
-    # hàm điều kiện
-
-    def normalize(self):
-        if self.d < 1 or self.maxday() < self.d:
-            self.d = 1
-
-    def maxday(self):
-        days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-        if self.kt_nhuan() == True:
-            days[2] = 29
-        if self.kt_nhuan() == False:
-            days[2] = 28
-        return days[self.m]
-
-    def kt_nhuan(self):
-        if self.y % 4 == 0:
-            return True
-        if self % 4 != 0:
-            return False
-
-    # thay đổi là lấy giá trị thuộc tính của
-
-    def __set__(self, d):
-        self.d = d
-
-    def __get__(self, d):
-        return self.d
-
-    def __set__(self, m):
-        self.m = m
-
-    def __get__(self, m):
-        return self.m
-
-    def __set__(self, y):
-        self.y = y
-
-    def __get__(self, y):
-        return self.y
-
-    # hàm nhập và xuất kết quả
-
-    def __str__(self):
-        return '{}/{}/{}'.format(self.d, self.m, self.y)
-
+# '''
 def main():
-    ngay=int(input("Nhập ngày là: "))
-    thang=int(input("Nhập tháng là: "))
-    nam=int(input("Nhập năm là: "))
+        date = input('Enter the date /d:m:yyyy: ')
+        (dd, mm, yy) = date.split(':')
+        dd = int(dd)
+        mm = int(mm)
+        yy = int(yy)
+        if mm == 1 or mm == 3 or mm == 5 or mm == 7 or mm == 8 or mm == 10 \
+            or mm == 12:
+            max1 = 31
+        elif mm == 4 or mm == 6 or mm == 9 or mm == 11:
+            max1 = 30
+        elif yy % 4 == 0 and yy % 100 != 0 or yy % 400 == 0:
+            max1 = 29
+        else:
+            max1 = 28
+        if mm < 1 or mm > 12:
+            print ('Date is invalid.')
+        elif dd < 1 or dd > max1:
+            print ('Date is invalid.')
+        elif dd == max1 and mm != 12:
+            dd = 1
+            mm = mm + 1
+            print ('The incremented date is: ', dd, mm, yy)
+        elif dd == 31 and mm == 12:
+            dd = 1
+            mm = 1
+            yy = yy + 1
+            print ('The incremented date is: ', dd, mm, yy)
+        else:
+            dd = dd + 1
+            print ('The incremented date is: ', dd, mm, yy)
 main()

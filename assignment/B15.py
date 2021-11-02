@@ -10,23 +10,30 @@ def nhap(l,n):
         # j=random.randint(0,10000)
         j=int(input("a["+str(i)+"]="))
         l.append(j)
-    for i in range(0,n-1):
-        for j in range(i+1,n):
-            if l[i]<l[j]:
-             tg=l[i]
-             l[i]=l[j]
-             l[j]=tg
-    print("Mảng sắp xếp lại là")
+def checkArray(list, evenArray,oddArray):
+    for i in list:
+        if i % 2 == 0:
+            evenArray.append(i)
+        else:
+            oddArray.append(i)
 def nhapN():
     n=int(input("Nhập n="))
     while n<0:
         n=int(input("Nhập sai nhập lại ="))
     return n
 def xuat(l):
+    print('Mảng cũ...')
     print(l)
 def main():
     l=[]
+    even =[]
+    odd = []
     n=nhapN()
     nhap(l,n)
     xuat(l)
+    checkArray(l, even, odd)
+    print('mảng mới...')
+    even.sort(reverse=True)
+    odd.sort(reverse=True)
+    print(even + odd)
 main()

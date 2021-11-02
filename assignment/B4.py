@@ -1,4 +1,4 @@
-'''Bài 4:  Viết chương trình nhập vào một giá trị số nguyên a. In ra màn hình tất cả số nguyên tố nằm trong khoảng [0,a].'''
+# '''Bài 4:  Viết chương trình nhập vào một giá trị số nguyên a. In ra màn hình tất cả số nguyên tố nằm trong khoảng [0,a].'''
 #Nhập số nguyên dương n
 def so_ngto(n): #gọi hàm kiểm tra số nguyên tố
     dem=0

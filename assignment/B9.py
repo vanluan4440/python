@@ -1,11 +1,10 @@
-'''
-Bài 9 :
-Viết chương trình cho phép người dùng nhập 1 chuỗi (tối đa 50 kí tự). 
-- Xóa hết tất cả kí tự khoảng trắng trong chuỗi '  ' và xuất chuỗi mới ra màn hình.
-VD: 	Nhập 	: S = Xin chao moi nguoi.
-	Xuất	: S = Xinchaomoinguoi.
 
-'''
+# Bài 9 :
+# Viết chương trình cho phép người dùng nhập 1 chuỗi (tối đa 50 kí tự).
+# - Xóa hết tất cả kí tự khoảng trắng trong chuỗi '  ' và xuất chuỗi mới ra màn hình.
+# VD: 	Nhập 	: S = Xin chao moi nguoi.
+# 	Xuất	: S = Xinchaomoinguoi.
+
 
 # Ham xoa khoang cach thua
 def xoa_khoang_cach_thua(str):

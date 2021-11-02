@@ -1,3 +1,5 @@
+# Bài 14: Viết câu lệnh xây dựng hàm Fibonacci(n) với n là số tự nhiên.
+# -	Hàm trả về 1 danh sách với các phần tử tương ứng là giá trị của dãy số Fibonacci có n giá trị
 def f(n): #gắn hàm để xuất dãy số Fibonacci
     if n == 0: return 0
     elif n == 1: return 1

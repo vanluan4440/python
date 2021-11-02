@@ -1,9 +1,9 @@
-'''
-Bài 8 :
-Viết chương trình cho phép người dùng nhập họ và tên. 
-- In ra màn hình họ tên sau khi chuẩn hóa (Tất cả chữ cái đầu đều viết hoa, toàn bộ tên viết HOA).
+# '''
+# Bài 8 :
+# Viết chương trình cho phép người dùng nhập họ và tên. 
+# - In ra màn hình họ tên sau khi chuẩn hóa (Tất cả chữ cái đầu đều viết hoa, toàn bộ tên viết HOA).
 
-'''
+# '''
 
 # Dinh nghia ham tra ve chuoi HOA hoac thuong
 def chuoi_hoa_thuong(str):
